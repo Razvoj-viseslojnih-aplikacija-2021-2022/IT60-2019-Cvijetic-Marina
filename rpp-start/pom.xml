@@ -11,7 +11,7 @@
 	<groupId>RvaBackend</groupId>
 	<artifactId>RvaBackend</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>rpp-start</name>
+	<name>RvaBackend</name>
 	<description>rpp-start</description>
 
 	<properties>
