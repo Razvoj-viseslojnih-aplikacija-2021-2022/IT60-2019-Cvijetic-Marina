@@ -1,13 +1,13 @@
-package rppstart;
+package rva;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class RppStartApplication {
+public class RvaStartApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(RppStartApplication.class, args);
+		SpringApplication.run(RvaStartApplication.class, args);
 	}
 
 }
