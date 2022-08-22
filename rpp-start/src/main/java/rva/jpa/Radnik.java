@@ -3,7 +3,6 @@ package rva.jpa;
 import java.io.Serializable;
 import javax.persistence.*;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 
 /**
@@ -30,7 +29,6 @@ public class Radnik implements Serializable {
 
 	//bi-directional many-to-one association to Obrazovanje
 	@ManyToOne
-	@JsonManagedReference
 	@JoinColumn(name="obrazovanje")
 	private Obrazovanje obrazovanje;
 

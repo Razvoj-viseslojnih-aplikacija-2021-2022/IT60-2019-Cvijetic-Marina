@@ -3,6 +3,7 @@ package rva.jpa;
 import java.io.Serializable;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -31,16 +32,18 @@ public class Preduzece implements Serializable {
 	private Integer idPreduzece;
 
 	private String naziv;
-
-	private String opis;
-
+	
 	private Integer pib;
 
 	private String sediste;
+	
+	private String opis;
+
+
 
 	//bi-directional many-to-one association to Sektor
 	@JsonIgnore
-	@OneToMany(mappedBy="preduzece")
+	@OneToMany(mappedBy="preduzece", cascade = {CascadeType.DETACH, CascadeType.REMOVE})
 	private List<Sektor> sektors;
 
 	public Preduzece() {

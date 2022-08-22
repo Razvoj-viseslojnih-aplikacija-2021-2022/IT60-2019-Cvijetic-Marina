@@ -1,14 +1,19 @@
 package rva.jpa;
 
 import java.io.Serializable;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 
 
@@ -35,10 +40,10 @@ public class Obrazovanje implements Serializable {
 	private String stepenStrucneSpreme;
 
 	//bi-directional many-to-one association to Radnik
-//	@JsonIgnore
+	@JsonIgnore
 //	@JsonBackReference
-//	@OneToMany(mappedBy="obrazovanje")
-//	private List<Radnik> radniks;
+	@OneToMany(mappedBy="obrazovanje", cascade = {CascadeType.DETACH, CascadeType.REMOVE})
+	private List<Radnik> radnik;
 
 	public Obrazovanje() {
 	}
