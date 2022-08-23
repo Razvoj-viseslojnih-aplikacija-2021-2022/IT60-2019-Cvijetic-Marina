@@ -8,10 +8,10 @@
 		<version>2.6.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>RvaBackend</groupId>
-	<artifactId>RvaBackend</artifactId>
+	<groupId>rpp-start</groupId>
+	<artifactId>rpp-start</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>RvaBackend</name>
+	<name>rpp-start</name>
 	<description>rpp-start</description>
 
 	<properties>
